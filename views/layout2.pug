@@ -30,9 +30,9 @@ html
                 br
                 a(href='connect')
                     img#connectImg(src='../image/myprofile-removebg-preview.png' alt='My profile')
-                a(href='../html/favorites.html')
+                a(href='favorites')
                     img#connectImg(src='../image/fav-removebg-preview.png' alt='Favorites')
-                a(href='../html/shoppingbag.html')
+                a(href='shoppingbag')
                     img#connectImg(src='../image/bag-removebg-preview.png' alt='Shopping bag')
         block content
         br
@@ -43,3 +43,18 @@ html
             a.text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shipping Policy
             a.text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newsletter
             br
+        script.
+            if (window.location.href.indexOf("logIn") != -1) {
+            alert("log in successfully!");
+            }
+            else if (window.location.href.indexOf("newUser") != -1) {
+            alert("new user created successfully!");
+            var data = sessionStorage.getItem('Style');
+            swal("Hi!\\nWe saw that you especially like " + data + "-style clothes, so to make it easier to get started on the site and find what you love.\n we want to recommend you a community that will suit you exactly! The “My Clothes” community that contains clothes that are mostly in " + data + "-style, your favorite.\nEnjoy!");
+            }
+            else if (window.location.href.indexOf("newContactRequest") != -1) {
+            alert("new contact request was sent successfully!");
+            }
+            else if (window.location.href.indexOf("connect") != -1) {
+            alert("Email doesn't exists in our systems");
+                

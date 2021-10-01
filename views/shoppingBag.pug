@@ -1,0 +1,90 @@
+extends layout2
+block content
+    script(src="/newJS.js")
+    script(src="/CRUD_functions.js")
+    link(rel='stylesheet', href='../css/shoppingbag.css')
+    .grid-container2
+        .newItems
+            .newItemHeader
+                h1 My bag
+            .item1
+                img#newItem(src='../image/bagbag.jpg', alt='item1')
+            .item2
+                img#newItem(src='../image/shirt2.jpg', alt='item2')
+            .item3
+                img#newItem(src='../image/earrings.jpg', alt='item3')
+            .item4
+                img#newItem(src='../image/shirt.jpg', alt='item4')
+            .details1
+                | Nike&apos;s training bag
+                br
+                | Style: Sport
+                br
+                | Price: 45 NIS
+            .details2
+                | Stripes black &amp; white shirt
+                br
+                | Style: Elegant
+                br
+                | Price: 30 NIS
+            .details3
+                | Butterfly gold earrings
+                br
+                | Style: Casual
+                br
+                | Price: 30 NIS
+            .details4
+                | White T-shirt
+                br
+                | Style: Casual
+                br
+                | Price: 20 NIS
+            //- form#cart(action='http://localhost:8000/removeItemFromCart', method='POST')
+            //-     .remove1
+            //-         button.Add(type='submit', name='item1', value='Close') Remove item
+            //-     .remove2
+            //-         button.Add(type='submit', name='item2', value='Close') Remove item
+            //-     .remove3
+            //-         button.Add(type='submit', name='item3', value='Close') Remove item
+            //-     .remove4
+            //-         button.Add(type='submit', name='item4', value='Close') Remove item
+            //-     .checkoutbutton
+            //-         button.checkOutDesign(type='submit', name='checkout', value='Close') Check out
+            form#cart(action='http://localhost:8000/removeItemFromCart', method='POST')
+                ul
+                    li
+                        .remove1
+                            button.Add(type='submit', name='item1', value='Close') Remove item
+                    li   
+                        .remove2
+                            button.Add(type='submit', name='item2', value='Close') Remove item
+                    li    
+                        .remove3    
+                            button.Add(type='submit', name='item3', value='Close') Remove item
+                    li
+                        .remove4
+                            button.Add(type='submit', name='item4', value='Close') Remove item
+            .checkoutbutton
+                button.checkOutDesign(type='submit', name='checkout', value='Close') Check out
+    script.
+        var div = document.createElement("div");
+        var h3 = document.createElement("h3");
+        if (window.location.search.substring(8) === null)
+            h3.innerHTML = "Total Amount: 0 NIS";
+        else {
+            h3.innerHTML = "Total Amount: " + window.location.search.substring(8) + " NIS";
+        }
+        div.setAttribute('id', "total");
+        div.setAttribute('style', "line-height:5em");
+        div.setAttribute('class', "total");
+        div.appendChild(h3);
+        document.getElementById('cart').appendChild(div);
+    script.
+        if (window.location.href.indexOf("shoppingbag?cart=1") != -1)
+            alert("item was removed from shopping bag successfully");
+        else if (window.location.href.indexOf("shoppingbag?cart=2") != -1)
+            alert("error while removing from shopping bag, please try again");
+        else if (window.location.href.indexOf("shoppingbag?cart=3") != -1)
+            alert("checked out successfully!");
+        else if (window.location.href.indexOf("shoppingbag?cart=4") != -1)
+            alert("error while checking out, please try again");

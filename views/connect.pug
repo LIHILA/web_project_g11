@@ -8,11 +8,12 @@ block content
             h1(style='font-size:50px; text-align: center;') Connect
             div(style='text-align: center;')
                 button.sendB(onclick='signUpClick(),able_fn(),able_ln(),able_e_u(),able_p_u(), disdable_e_i(), disable_p_i()')
-                | Sign
-                | Up
-                button.sendB(onclick='signInClick(),able_e_i(),able_p_i(), disable_fn(), disable_ln(), disable_e_u(),disable_p_u()')
-                | Sign
-                | In
+                    | Sign
+                    | Up
+                |                        &nbsp;                                      
+                button.sendB(value= 'Sign In' onclick='signInClick(),able_e_i(),able_p_i(), disable_fn(), disable_ln(), disable_e_u(),disable_p_u()')
+                    | Sign
+                    | In
             form#signup(action='http://localhost:8000/newUser', method='POST', style='display: none;')
                 label(for='FirstName')
                     b First Name:
@@ -43,9 +44,21 @@ block content
                 b Password:
                 input#pwdup(type='password', name='pwdup', maxlength='8', placeholder='Choose a password (max 8 digits)', style='width: 30%; height: 50px;', required='')
                 br
+                label(for='about')
+                b Tell us about your store:
+                | &#x9;
+                input#about(116='', type='text', name='about', placeholder='Enter your about ..', style='width: 30%; height: 50px;', required='')
+                | &#x9;
                 br
-                input.sendB(type='submit', value='Go!')
-            form#signin(action='http://localhost:8000/logIn', method='POST', style='display: none;')
+                | &#x9;
+                br
+                label(for='photo') Choose a photo of you to upload:
+                |        
+                input#photo(type='file', name='photo', accept='.jpg, .jpeg, .png')
+                br
+                input.sendB(type='submit', value='Go!', onclick='this.form.submit(); saveDataSession();')
+
+            form#signin(action='http://localhost:8000/connect', method='POST', style='display: none;')
                 label(for='Emailin')
                 b Email:
                 input#Emailin(type='text', name='Emailin', placeholder='Enter Email address you sign up with ..', style='width: 30%; height: 50px;', required='')
@@ -56,5 +69,8 @@ block content
                 br
                 // <button type="submit" class="sendB" onclick="LogIn()" value="Close">Go!</button>
                 button.sendB(onclick="forgotPassword(document.getElementById('Emailin').value)", value='close')
-                | Forgot my password
-                input(type='submit', name='action', value='login')
+                    | Forgot my password
+               
+                input.sendB(type='submit', name='action', value='login')
+                |                        &nbsp;  
+                input.sendB(type='submit', name='action', value='forgotPass')
