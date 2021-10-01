@@ -1,0 +1,60 @@
+extends layout2 
+block content 
+    script(src="/newJS.js")
+    script(src="/CRUD_functions.js")
+    link(rel='stylesheet', href='../css/storeBrenda.css')
+    .grid-container2
+        
+        .newItemHeader
+                | Brenda&apos;s store
+        .aboutme
+                h2 Hey! my name is Brenda, and this is my jewelry store.
+        .newItems        
+            .item1
+                img#newItem(src='../image/jul1.jpeg', alt='item1')
+            .item2
+                img#newItem(src='../image/jul2.jpeg', alt='item2')
+            .item3
+                img#newItem(src='../image/jul3.jpeg', alt='item3')
+            .item4
+                img#newItem(src='../image/jul4.jpeg', alt='item4')
+            .details1
+                | Butterfly neckless
+                br
+                | Style: Accessories
+                br
+                | Price: 45 NIS
+            .details2
+                | Two circles neckless
+                br
+                | Style: Accessories
+                br
+                | Price: 35 NIS
+            .details3
+                | Colorful fly neckless
+                br
+                | Style: Accessories
+                br
+                | Price: 20 NIS
+            .details4
+                | Heart neckless
+                br
+                | Style: Accessories
+                br
+                | Price: 50 NIS
+            .addtocart1
+                button.Add(type='submit', onclick="addedToCart('Butterfly neckless','Accessories',45,'../image/jul1.jpeg')", value='Close') Add to cart
+            .addtocart2
+                button.Add(type='submit', onclick='addedToCart()', value='Close') Add to cart
+            .addtocart3
+                button.Add(type='submit', onclick='addedToCart()', value='Close') Add to cart
+            .addtocart4
+                button.Add(type='submit', onclick='addedToCart()', value='Close') Add to cart
+            .addtofav1
+                button.Add(type='submit', onclick='addedTofav()', value='Close') Add to fav
+            .addtofav2
+                button.Add(type='submit', onclick='addedTofav()', value='Close') Add to fav
+            .addtofav3
+                button.Add(type='submit', onclick='addedTofav()', value='Close') Add to fav
+            .addtofav4
+                button.Add(type='submit', onclick='addedTofav()', value='Close') Add to fav

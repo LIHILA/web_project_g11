@@ -1,0 +1,54 @@
+extends layout2
+
+block content
+    link(rel='stylesheet', href='../css/homepage.css')
+    .grid-container2
+        .newEvents
+            h1 NEW EVENTS 
+            #eventsPic
+            br
+            span#eventsName
+            br
+        .newItems
+            .newItemHeader
+                h1 NEW ITEMS
+            .item1
+                a(href='../html/favorites.html')
+                    img#newItem(src='../image/shortJeansOne.png' alt='item1')
+            .item2
+                a(href='../html/favorites.html')
+                    img#newItem(src='../image/setHores.png' alt='item2')
+            .item3
+                a(href='../html/favorites.html')
+                    img#newItem(src='../image/pantsBlackAndWhite.png' alt='item3')
+            .item4
+                a(href='../html/favorites.html')
+                    img#newItem(src='../image/bagBez.png' alt='item4')
+            .details1 short jeans -  'One'<br> Small <br><br> 200 NIS
+            .details2 Boho set - 'Adika' <br> medium <br> <br> 130 NIS
+            .details3 plaid pants- 'Bershka' <br> 38 <br><br> 99 NIS
+            .details4 woolly bag- 'Zara'<br> Small <br><br> 60 NIS
+        .news
+            .newsHeader
+                h1 NEWS
+            .news1
+                a(href='../html/favorites.html')
+                    img#news123(src='../image/artical1.jpg' alt='item1')
+            .news2
+                a(href='../html/favorites.html')
+                    img#news123(src='../image/artical2.jpg' alt='item2')
+            .news3
+                a(href='../html/favorites.html')
+                   img#news123(src='../image/artical3.jpg' alt='item3')
+            .detailsnews1 Sustainability Studies at IDC Herzliya - Temporary Order
+            .detailsnews2 The EU will introduce regulations that will eliminate production of polluting cars by 2035
+            .detailsnews3 10 daily ways to reduce environmental damage
+
+
+
+    h1 hello hello pug
+    h3 #{variable1}
+    p #{variable2}
+    ul 
+        each item, i in advantages 
+            li= item.advantage

@@ -1,0 +1,68 @@
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: 400px 100px;
+    grid-gap: 40px;
+    padding: 25px;
+    font-family: latoBold;
+
+}
+
+body {
+    background-image: url(../image/whiteFlowers.jpeg);
+    background-size: cover;
+    padding: 50px;
+    border: 1px solid white;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.contact{
+    margin-bottom: 20px;
+    grid-row: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid white;
+    background-color: antiquewhite;
+}
+
+
+
+.text1{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    color: black;
+    text-decoration: none;
+    font-family: latoBold;
+    font-size: 20px;
+    text-align: center;
+}
+
+::placeholder{
+    font-family: latoBold;
+    font-size: 15px;
+}
+
+
+
+
+.sendB {
+    background-color: wheat;
+    font-size: 15px;
+    font-family: latoBold;
+    padding: 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 30%;
+    animation: pulse 4s infinite;
+}
+
+
+
+@font-face{
+    font-family: latoBold;
+    src: url("../Alphabetized\ Cassette\ Tapes\ Classic.ttf");
+}

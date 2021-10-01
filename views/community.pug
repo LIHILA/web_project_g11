@@ -1,0 +1,61 @@
+extends layout2
+
+block content
+    link(rel='stylesheet', href='../css/community.css')
+    .grid-container2
+        .headerLeft
+            h3 My Communities
+        .left
+            .community1
+            a(href='communityPage')
+                img#community(src='../image/boho.jpeg', alt='community1', width='100', height='100')
+            div
+                a(href='communityPage') boho
+            br
+            br
+            .community2
+            img#community(src='../image/denim.jpeg', alt='community2', width='100', height='100')
+            | Denim
+            br
+            br
+            .community3
+            img#community(src='../image/casual.jpeg', alt='community3', width='100', height='100')
+            | Casual
+            br
+            br
+            .community4
+            img#community(src='../image/occasion.jpeg', alt='community4', width='100', height='100')
+            | Occasion
+        .headerMiddle
+            h3 Comments
+        .middle
+            .aComment
+                img#newItem(src='../image/a.jpeg', alt='aComment')
+                .details5 &quot;Omg the clothes here are amazing&quot;
+            .fComment
+                img#newItem(src='../image/f.jpeg', alt='fComment')
+                .details6 &quot;Beautiful !&quot;
+            .dComment
+                img#newItem(src='../image/d.jpeg', alt='dComment')
+                .details7 &quot;Amazing outfits&quot;
+        .headerRight
+            h3 Suggested communities
+        .right
+            .community1
+            img#community(src='../image/glitter.jpeg', alt='glitter', width='100', height='100')
+            | Glitter
+            br
+            br
+            .community2
+            img#community(src='../image/boyfriend.jpeg', alt='boyfriend', width='100', height='100')
+            | Boyfriend
+            br
+            br
+            .community3
+            img#community(src='../image/goth.jpeg', alt='goth', width='100', height='100')
+            | Goth
+            br
+            br
+            .community4
+            img#community(src='../image/black.jpeg', alt='black', width='100', height='100')
+            | Black

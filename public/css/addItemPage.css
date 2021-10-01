@@ -1,0 +1,65 @@
+﻿.grid-container2 {
+    display: grid;
+     
+    justify-items: center;
+    font-family: latoBold;
+    background-size: cover;
+    background-color: var(--mynewlighter);
+    
+}
+
+
+
+#img {
+    border: dotted #397e6c;
+}
+
+.name {
+    text-align: center;
+    grid-row: 2;
+}
+
+.style {
+    text-align: center;
+    grid-row: 3;
+}
+
+.price {
+    text-align: center;
+    grid-row: 4;
+}
+
+form {
+    text-align: center;
+    grid-row: 5;
+}
+
+.submit {
+    grid-row: 7;
+}
+
+.submitbutton {
+    background-color: wheat;
+    font-size: 15px;
+    font-family: cursive;
+    padding: 20px;
+    margin: 8px;
+    border: solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 30%;
+}
+
+.newItems2{
+    display: grid;
+    text-align: center;
+    grid-area: a;
+    background-color: antiquewhite;
+    padding: 10px;
+    border: 2px solid white;
+    margin: 20px; 
+}
+
+.main{
+    text-align: center;  
+}

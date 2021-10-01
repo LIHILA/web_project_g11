@@ -1,0 +1,51 @@
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: 450px 100px 40px;
+    grid-gap: 40px;
+    padding: 50px;
+    /* margin: 100px; */
+    background-color: var(--mynewlighter);
+}
+
+
+.text1{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    text-decoration: none;
+    font-family: lato;
+    font-size: 20px;
+    text-align: left;
+    color:black;
+}
+
+
+
+::placeholder{
+    font-family: lato;
+    font-size: 15px;
+}
+
+input[type=text] {
+    margin: 14px ;
+    display: inline-block;
+}
+
+.sendB {
+        background-color:  #FFF5EE;
+        font-size: 25px;
+        font-family: lato;
+        padding: 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        border-radius: 50%;
+        
+}
+
+.sendB:hover {
+    opacity: 1;
+}
+

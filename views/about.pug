@@ -1,0 +1,20 @@
+extends layout2 
+block content 
+    script(src="/newJS.js")
+    link(rel='stylesheet', href='../css/about.css')
+    .grid-container2
+        .about_text
+            h1.title  ABOUT US... 
+            p#text
+                | &quot;FashionSocial&quot; is a social network founded following our passion for fashion alongside our love for
+                | the planet.
+                br
+                | In &quot;FashionSocial&quot; you can find unique items that you may not find in malls and stores,
+                br
+                | ...
+                br
+                br
+            input#btn.sendB(onclick='read_more_less()', type='button', value='Read More')
+        .img
+            <img src="../image/LOGO.jpg" alt="logo" width="300px" style="border-radius: 20%;">
+        

@@ -1,0 +1,302 @@
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    /* grid-template-rows: auto auto auto auto auto auto; */
+    justify-items: center;
+    font-family: latoBold;
+    background-size: cover;
+    text-align: center; 
+    background-color:var(--myLightBackgroung);
+    
+}
+
+.right {
+    
+    display: grid;
+    float: right;
+    grid-template-columns: 50% 50%;
+    grid-column: 2;
+    grid-row: 2/6;
+    padding: 10px;
+    margin: 20px;
+}
+
+.left {
+    display: grid;
+    float: left;
+    grid-template-columns: 50% 50%;
+    grid-column: 1;
+    /* grid-row: 2/6; */
+    padding: 10px;
+    margin: 20px;
+}
+
+.headerLeft {
+    float: left;
+    margin-bottom: 20px;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid white;
+    background-color: antiquewhite;
+    margin: 20px;
+}
+
+.headerRight {
+    float: right;
+    margin-bottom: 20px;
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid white;
+    background-color: antiquewhite;
+    margin: 20px;
+}
+
+body {
+    background-image: url(../image/whiteFlowers.jpeg);
+    background-size: cover;
+    padding: 50px;
+    border: 1px solid white;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#img {
+    border: dotted #397e6c;
+    width: 100px;
+}
+
+.item1 {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    
+}
+
+#newItem:hover {
+    width: 180px;
+    height: 230px;
+}
+
+#newItem {
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+        object-fit: cover;
+        margin: auto;
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-size: cover;
+}
+
+.item3 {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item4 {
+    grid-column: 2;
+    grid-row: 4;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item5 {
+    grid-column: 1;
+    grid-row: 6;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item6 {
+    grid-column: 2;
+    grid-row: 6;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item7 {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item8 {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item9 {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item10 {
+    grid-column: 2;
+    grid-row: 4;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item11 {
+    grid-column: 1;
+    grid-row: 6;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.item12 {
+    grid-column: 2;
+    grid-row: 6;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.details1 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.details2 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.details3 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.details4 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.details5 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row: 7;
+}
+
+.details6 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 2;
+    grid-row: 7;
+}
+
+.details7 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.details8 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.details9 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.details10 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.details11 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row: 7;
+}
+
+.details12 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 2;
+    grid-row: 7;
+}
+
+.text1 {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    text-decoration: none;
+    text-align: center;
+    color: #f4b7c7;
+    font-size: 20px;
+}
+
+#popup:hover {
+    width: 210px;
+}

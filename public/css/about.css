@@ -1,0 +1,52 @@
+
+  
+.grid-container2{
+      display: grid;
+      grid-template-columns: 650px auto;
+      grid-template-areas: 'aboutText img';
+      text-align: center; 
+      font-family: latoBold;
+      grid-template-columns: 70% 30%;
+      background-color:var(--myLightBackgroung);
+      
+}
+
+.about_text{
+    /* grid-column: 1 / span 2;
+    grid-row: 1/span 1; */
+    grid-area: aboutText;
+    height: 400px;
+    background-color:rgba(255, 255, 255, 0.63);
+    margin: 10px;
+    text-align: left;
+    padding: 20px;
+    font-family: latoBold;
+}
+
+.img{
+    grid-area: img ;
+    height: 300px;
+    background-color:rgba(255, 255, 255, 0.63);
+    margin: 10px;
+    height: 400px;
+    padding: 20px;
+   
+
+}
+
+.sendB {
+    background-color: var(--darkGreen);
+    font-size: 15px;
+    font-family: latoBold;
+    padding: 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    /* opacity: 0.8; */
+}
+
+.sendB:hover {
+    opacity: 1;
+    }
+
+    

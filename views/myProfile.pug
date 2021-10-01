@@ -1,0 +1,53 @@
+extends layout2
+block content
+    script(src="/newJS.js")
+    script(src="/CRUD_functions.js")
+    link(rel='stylesheet', href='../css/myprofile.css')
+    .grid-container2
+        .left
+            .headerLeft
+                h1 ADD NEW ITEM 
+            .addItem 
+                a(href='addItemPage')
+                    img#addItem(src='../image/addItem-removebg-preview.png')
+        .right 
+            .headerRight
+                 h1 MY STORE
+
+            .aboutme
+                | About me:&nbsp;&nbsp;&nbsp;&nbsp; 
+                input#myText(type='text', value='Tell us about your store here') 
+                |  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+                button.submitbutton(onclick='myFunction()') Submit
+            .item9
+                img#newItem(src='../image/pants.jpg', alt='item9')
+            .item10
+                img#newItem(src='../image/highheel.jpg', alt='item10')
+            .item11
+                img#newItem(src='../image/shoes.jpg', alt='item11')
+            .item12
+                img#newItem(src='../image/neckless.jpg', alt='item12')
+            .details9
+                | Yellow long pants
+                br
+                | Style: Dramatic, Goth
+                br
+                | Price: 30 NIS
+            .details10
+                | Black high heels
+                br
+                | Style: Party, Casual
+                br
+                | Price: 45 NIS
+            .details11
+                | White sneakers
+                br
+                | Style: Fancy, Elegant
+                br
+                | Price: 60 NIS
+            .details12
+                | Butterfly necklace
+                br
+                | Style: Fancy
+                br
+                | Price: 35 NIS

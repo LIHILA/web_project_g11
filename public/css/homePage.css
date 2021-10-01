@@ -1,0 +1,280 @@
+    .grid-container2{
+    display: grid;
+    grid-template-columns: 345px auto;
+    grid-template-areas: 
+    "events newItems"
+    "events newItems"
+    "events  news"  ;
+    text-align: center; 
+    font-family: latoBold;
+    background-color:var(--myLightBackgroung);
+     }
+   
+   
+   .newEvents {
+    grid-area: events ;
+    background-color: var(--mynewlighter);
+    border: 2px solid white;
+    margin: 20px; 
+    text-align: center;
+    font-family: varela;   
+   }
+
+   #eventsPic {
+    /* grid-column: 2 / span 3;
+    grid-row: 1 / span 1;  */
+    width: 300px; 
+    height: 300px;
+    background-image: url("../image/2girls.jpeg");
+    background-size: 100% 100%;
+    text-align: center;
+    animation: anim1 ease-in-out 30s infinite;
+    }
+
+    @keyframes anim1 {
+        0%{
+            background-image: url("../image/2girls.jpeg");
+        }
+        20%{
+            background-image: url("../image/jeans.jpeg");
+    
+        }
+        40%{
+            background-image: url("../image/tahana.jpeg");
+    
+        }
+        60%{
+            background-image: url("../image/krembo.jpeg");
+    
+        }
+        80%{
+            background-image: url("../image/elegant.jpeg");
+    
+        }
+        100%{
+            background-image: url("../image/2girls.jpeg");
+    
+        }
+  }
+    
+  span::before {
+        content: "text 1";
+        animation: anim2 ease-in-out 30s infinite;
+        font-family: lato;
+        padding-left: 10px;
+  }
+    
+    
+  @keyframes anim2 {
+        0%{
+            content:"May & Hadar closet's 12.12";
+        }
+        20%{
+            content: "JUST JEANS! 25.10";
+    
+        }
+        40%{
+            content: "Second-hand in the 'station' area 1.11";
+    
+        }
+        60%{
+            content: "Let's donate - 'THE WINGS OF KREMBO'";
+    
+        }
+        80%{
+            content: "Elegant and classy 19.9";
+    
+        }
+        100%{
+            content: "May & Hadar closet 12.12";
+    
+        } 
+  }
+   
+   .newItems{
+    grid-area: newItems;
+    background-color: var(--mynewlighter); 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+    'header header header header'
+    'item1 item2 item3 item4'
+    'details1 details2 details3 details4';
+    background-color: antiquewhite;
+    padding: 10px;
+    border: 2px solid white;
+    margin: 20px; 
+     }
+    
+     #newItem {
+        width: 150px;
+        height: 200px;
+        background-size: cover;
+        object-fit: cover;
+        margin: auto;
+        
+      }
+
+      .newItemHeader{
+        grid-area: header;  
+        /* padding: 20px;
+       border: 2px solid white; */
+       margin-bottom: 20px; 
+      }
+      
+      .Item1{
+       grid-area: item1;
+       text-align: center;
+        /* padding: 20px white;
+       border: 2px solid white;
+      margin: 20px white; */
+      }
+      
+      
+      .Item2{
+        grid-area: item2;
+        text-align: center;
+        /* padding: 20px;
+        border: 2px solid white;
+        margin: 20px; */
+      }
+      
+      .Item3{
+        grid-area: item3;
+        text-align: center;
+        /* padding: 20px;
+        border: 2px solid white;
+        margin: 20px; */
+      }
+
+      .Item4{
+        grid-area: item4;
+        text-align: center;
+        /* padding: 20px;
+        border: 2px solid white;
+        margin: 20px; */
+      }
+
+      .details1{
+        grid-area: details1;
+        padding: 20px;
+        border: 2px solid white;
+        margin: 20px;   
+      }
+      
+      .details2{
+        grid-area: details2;
+        padding: 20px;
+        border: 2px solid white;
+        margin: 20px;   
+      }
+      
+      .details3{
+        grid-area: details3;
+        padding: 20px;
+        border: 2px solid white;
+        margin: 20px;   
+      }
+      
+      .details4{
+        grid-area: details4;
+        padding: 20px;
+        border: 2px solid white;
+        margin: 20px;   
+      }
+
+/* 
+      .newItems{
+        grid-area: newItems;
+        background-color: var(--mynewlighter); 
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+        'header header header header'
+        'item1 item2 item3 item4'
+        'details1 details2 details3 details4';
+        background-color: antiquewhite;
+        padding: 10px;
+        border: 2px solid white;
+        margin: 20px; 
+         } */
+      
+      .news{
+        grid-area: news;
+        display: grid;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+        grid-template-areas:
+        'headerNews headerNews headerNews'
+        'news1 news2 news3'
+        'detailsNews1 detailsNews2 detailsNews3' ;
+        
+        background-color: antiquewhite;
+        /* grid-column: 2/ 4;
+        grid-row: 3/ 4; */
+        padding: 10px;
+        border: 2px solid white;
+        margin: 20px;  
+      }
+      
+      
+      #news123{
+        width: 250px;
+        height: 150px;
+        
+      }
+      
+      
+.newsHeader{
+    grid-area: headerNews;  
+    padding: 20px;
+    border: 2px solid white; 
+    margin-bottom: 20px; 
+    text-align: center;
+   }
+   
+   .news1{
+    grid-area: news1;
+    /* padding: 20px white;
+    border: 2px solid white;
+    margin: 20px white; */
+   }
+   
+   
+   .news2{
+     grid-area: news2;
+     /* padding: 20px;
+     border: 2px solid white;
+     margin: 20px; */
+   }
+   
+   .news3{
+     grid-area: news3;
+     /* padding: 20px;
+     border: 2px solid white;
+     margin: 20px; */
+   }
+   
+   
+   .detailsNews1{
+     grid-area: detailsNews1;
+     padding: 20px;
+     border: 2px solid white;
+     margin: 20px;   
+   }
+   
+   .detailsNews2{
+     grid-area: detailsNews2;
+     padding: 20px;
+     border: 2px solid white;
+     margin: 20px;   
+   }
+   
+   .detailsNews3{
+     grid-area: detailsNews3;
+     padding: 20px;
+     border: 2px solid white;
+     margin: 20px;   
+   }
+   
+      
+      
