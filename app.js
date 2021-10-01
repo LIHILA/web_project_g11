@@ -81,10 +81,22 @@ app.get('/connect', (req, res) => {
     res.render('connect');
 });
 
+//shoppingbag page
+app.get('/shoppingbag', (req, res) => {
+    res.render('shoppingbag');
+});
+
+//favorites page
+app.get('/favorites', (req, res) => {
+    res.render('favorites');
+});
+
+
 // set server to listen at port
 app.listen(port, ()=>{
 console.log('Server is renning at port'+ port)
 });
+
 
 
 

@@ -19,12 +19,12 @@ const createNewItem = function (req, res) {
         "brand": req.body.brand,
         "photo": req.body.photo
     };
-    sql.query("INSERT INTO item SET ?", NEWI, (err, mysqlres) => {
+    sql.query("INSERT INTO web_project_g11.item SET ?", NEWI, (err, mysqlres) => {
         if (err) {
             console.log("error: ", err);
-            res.sendFile(path.join(__dirname, '/html/addItemPage.html'));
+            res.sendFile(path.join(__dirname, '/views/addItemPage.pug'));
         }
-        res.sendFile(path.join(__dirname, '/html/myprofile.html'));
+        res.sendFile(path.join(__dirname, '/views/myprofile.pug'));
         return;
     });
 };
@@ -46,16 +46,16 @@ const createNewUser = function (req, res) {
         "email": req.body.Emailup.replace('@','_'),
         "pass": req.body.pwdup
     };
-    sql.query("INSERT INTO user SET ?", newUser, (err, mysqlres) => {
+    sql.query("INSERT INTO web_project_g11.user SET ?", newUser, (err, mysqlres) => {
         if (err) {
             if (err === 'ER_DUP_ENTRY') {
-              res.sendFile(path.join(__dirname, '/html/contact.html'));
+              res.sendFile(path.join(__dirname, '/views/connect.pug'));
             }
             console.log("error: ", err);
-              res.sendFile(path.join(__dirname, '/html/contact.html'));
+              res.sendFile(path.join(__dirname, '/views/connect.pug'));
             return;
         }
-        res.sendFile(path.join(__dirname, '/html/homepage.html'));
+        res.sendFile(path.join(__dirname, 'homepage.pug'));
         return;
     });
 };
