@@ -97,8 +97,8 @@ margin-top: 20px;
     grid-column: 4;
     grid-row:3;
 }
-
-/* .remove1{
+/* 
+.remove1{
     grid-column: 1;
     grid-row:4;    
 }
@@ -116,9 +116,7 @@ margin-top: 20px;
 } */
 
 .total {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 65;
+grid-column: 1/4 span;
     text-align: center;
     
 }
@@ -157,8 +155,11 @@ margin-top: 20px;
 form{
     grid-column: 1/4 span;
 }
-form ul { list-style-type: none;
+form ul {
+    list-style-type: none;
  }
 
-form ul li { display: inline }
-
+ form div{
+    display: inline-block;
+    width: 25%;
+ }
