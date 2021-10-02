@@ -5,6 +5,7 @@ const port = 8000;
 const path = require('path');
 const bodyParser = require("body-parser");
 const CRUD_operations = require("./CRUD_functions.js");
+const newJS = require("./newJS.js");
 
 app.use(express.static((path.join(__dirname, '/'))));
 app.use(bodyParser.json());
@@ -82,8 +83,19 @@ app.get('/connect', (req, res) => {
 });
 
 //shoppingbag page
-app.get('/shoppingbag', (req, res) => {
-    res.render('shoppingbag');
+
+// app.get('/shoppingbag', (req, res) => {
+//     res.render('shoppingbag');
+// });
+
+app.get('/shoppingbag(\\?amount)?', (req, res) => {
+    if (req.query.amount || req.query.cart) {
+        console.log("y")
+        res.render('shoppingbag');
+    } else {
+        console.log("x")
+        CRUD_operations.calcAmount(req,res);
+    }
 });
 
 //favorites page
@@ -105,8 +117,8 @@ console.log('Server is renning at port'+ port)
 app.post("/newUser", CRUD_operations.createNewUser);
 app.post("/newContactRequest", CRUD_operations.createNewContactRequest);
 app.post("/newItem", CRUD_operations.createNewItem);
-app.post("/removeItem", CRUD_operations.removeItem);
-app.post("/addToCart", CRUD_operations.addedToCart);
+app.post("/connect", CRUD_operations.connect);
+app.post("/removeItemFromCart", CRUD_operations.removeItemFromCart);
+app.post("/removeItemFromFav", CRUD_operations.removeItemFromFav);
 app.post("/addTofav", CRUD_operations.addedTofav);
-app.post("/checkout", CRUD_operations.checkout);
 

@@ -1,7 +1,6 @@
 CREATE DATABASE web_project_g11;
 
 drop table web_project_g11.user;
-drop table web_project_g11.store;
 drop table web_project_g11.item;
 drop table web_project_g11.userFavorites;
 drop table web_project_g11.shoppingbag;
@@ -14,6 +13,7 @@ create table web_project_g11.user
     lastName varchar(500) not null,
     pass varchar(500) not null,
     FavoritStyle varchar(500) not null,
+    about varchar(500) not null,
     photo longblob not null
 );
 
@@ -26,7 +26,7 @@ create table web_project_g11.item
     size varchar(500) not null,
     brand varchar(500) not null,
     photo longblob not null,
-    store_id varchar (500)
+    store_id varchar(500) not null
 );
 
 create table web_project_g11.userFavorites
@@ -37,7 +37,8 @@ create table web_project_g11.userFavorites
     price int not null,
     size varchar(500) not null,
     brand varchar(500) not null,
-    photo longblob not null
+    photo longblob not null,
+    store_id varchar(500) not null
 );
 
 create table web_project_g11.shoppingbag
@@ -48,7 +49,8 @@ create table web_project_g11.shoppingbag
     price int not null,
     size varchar(500) not null,
     brand varchar(500) not null,
-    photo longblob not null
+    photo longblob not null,
+    store_id varchar(500) not null
 );
 
 create table web_project_g11.contactUs
@@ -59,5 +61,3 @@ create table web_project_g11.contactUs
 	Email varchar(500) not null,
 	comment varchar(500) not null
 );
-
-select * from web_project_g11.item;
