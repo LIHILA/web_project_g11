@@ -1,0 +1,165 @@
+.grid-container2 {
+    display: grid;
+    justify-items: center;
+    font-family: latoBold;
+    background-size: cover;
+}
+
+
+#img {
+    border: dotted #397e6c;
+}
+
+.newItems{ 
+display: grid;
+grid-template-columns: auto auto auto auto;
+
+}
+.newItemHeader{
+grid: row ;
+grid-column: 1/4 span;
+padding: 10px;
+border: 2px solid white;
+background-color: antiquewhite;
+margin-top: 20px;
+
+}
+
+.item1 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    grid-column: 1;
+    grid-row:2;
+
+}
+
+.item2 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    grid-column: 2;
+    grid-row:2;
+}
+
+.item3 {
+
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    grid-column: 3;
+    grid-row:2;
+}
+
+.item4 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    grid-column: 4;
+    grid-row:2;
+}
+
+.details1 {
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row:3;
+}
+
+.details2 {
+    grid-area: details2;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 2;
+    grid-row:3;
+}
+
+.details3 {
+    grid-area: details3;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 3;
+    grid-row:3;
+}
+
+.details4 {
+    grid-area: details4;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: antiquewhite;
+    grid-column: 4;
+    grid-row:3;
+}
+/* 
+.remove1{
+    grid-column: 1;
+    grid-row:4;    
+}
+.remove2{
+    grid-column: 2;
+    grid-row:4;    
+}
+.remove3{
+    grid-column: 3;
+    grid-row:4;    
+}
+.remove1{
+    grid-column: 4;
+    grid-row:4;    
+} */
+
+.total {
+grid-column: 1/4 span;
+    text-align: center;
+    
+}
+
+.checkoutbutton {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 7;
+}
+
+.Add {
+    background-color: wheat;
+    font-size: 15px;
+    font-family: cursive;
+    padding: 20px;
+    margin: 8px 0;
+    border: solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 30%;
+    animation: pulse 4s infinite;
+}
+
+.checkOutDesign {
+    background-color: pink;
+    font-size: 25px;
+    font-family: cursive;
+    padding: 20px;
+    margin: 8px 0;
+    border: solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: pulse 4s infinite;
+}
+form{
+    grid-column: 1/4 span;
+}
+form ul {
+    list-style-type: none;
+ }
+
+ form div{
+    display: inline-block;
+    width: 25%;
+ }
