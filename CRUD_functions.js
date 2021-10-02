@@ -79,7 +79,7 @@ const createNewContactRequest = function (req, res) {
         "Email": req.body.Email,
         "Comment": req.body.Comment
     };
-    sql.query("INSERT INTO contactUs SET ?", newContactRequest, (err, mysqlres) => {
+    sql.query("INSERT INTO web_project_g11.contactUs SET ?", newContactRequest, (err, mysqlres) => {
         if (err) {
             console.log("error: ", err);
             res.render(path.join(__dirname, '/views/newContactRequest'));
