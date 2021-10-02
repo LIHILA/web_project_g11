@@ -1,7 +1,7 @@
 extends layout2
 block content
-    script(src="/newJS.js")
-    script(src="/CRUD_functions.js")
+    script(src="../newJS.js")
+    script(src="../CRUD_functions.js")
     link(rel='stylesheet', href='../css/connectPage.css')
     .grid-container2
         .text1
@@ -67,9 +67,7 @@ block content
                 b Password:
                 input#pwdin(type='password', name='pwdin', maxlength='8', placeholder='Enter your password', style='width: 30%; height: 50px;')
                 br
-                // <button type="submit" class="sendB" onclick="LogIn()" value="Close">Go!</button>
-                button.sendB(onclick="forgotPassword(document.getElementById('Emailin').value)", value='close')
-                    | Forgot my password
+                
                
                 input.sendB(type='submit', name='action', value='login')
                 |                        &nbsp;  
