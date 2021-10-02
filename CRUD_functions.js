@@ -18,14 +18,15 @@ const createNewItem = function (req, res) {
         "price": req.body.price,
         "size": req.body.size,
         "brand": req.body.brand,
-        "photo": req.body.photo
+        "photo": req.body.photo,
+        "store_id": 'Change_to_the_logged_in_user'
     };
     sql.query("INSERT INTO web_project_g11.item SET ?", NEWI, (err, mysqlres) => {
         if (err) {
             console.log("error: ", err);
-            res.sendFile(path.join(__dirname, '/views/addItemPage.pug'));
+            res.render(path.join(__dirname, '/views/addItemPage.pug'));
         }
-        res.sendFile(path.join(__dirname, '/views/myprofile.pug'));
+        res.render(path.join(__dirname, '/views/myprofile.pug'));
         return;
     });
 };
