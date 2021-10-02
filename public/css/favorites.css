@@ -141,3 +141,11 @@
     border-radius: 30%;
     animation: pulse 4s infinite;
 }
+form{
+    grid-column: 1/4 span;
+}
+
+ form div{
+    display: inline-block;
+    width: 25%;
+ }

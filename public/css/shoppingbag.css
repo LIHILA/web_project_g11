@@ -155,9 +155,6 @@ grid-column: 1/4 span;
 form{
     grid-column: 1/4 span;
 }
-form ul {
-    list-style-type: none;
- }
 
  form div{
     display: inline-block;
