@@ -2,6 +2,7 @@ extends layout2
 
 block content
     link(rel='stylesheet', href='../css/homepage.css')
+    
     .grid-container2
         .newEvents
             h1 NEW EVENTS 
@@ -43,12 +44,21 @@ block content
             .detailsnews1 Sustainability Studies at IDC Herzliya - Temporary Order
             .detailsnews2 The EU will introduce regulations that will eliminate production of polluting cars by 2035
             .detailsnews3 10 daily ways to reduce environmental damage
+        script.
+            if (window.location.href.indexOf("login") != -1) {
+                alert("log in successfully!");
+            }
+            else if (window.location.href.indexOf("newUser") != -1) {
+                alert("new user created successfully!");
+                var data = sessionStorage.getItem('Style');
+                alert ("Hi,\n\n We saw that you especially like " + data + "-style clothes, so to make it easier to get started on the site and find what you love.\n we want to recommend you a community that will suit you exactly! The “My Clothes” community that contains clothes that are mostly in " + data + "-style, your favorite.\n\nEnjoy!");
+            }
+            else if (window.location.href.indexOf("newContactRequest") != -1) {
+                alert("new contact request was sent successfully!");
+            }
+            else if (window.location.href.indexOf("connect") != -1) {
+            alert("Email doesn't exists in our systems");
+            }
+        
 
-
-
-    //- h1 hello hello pug
-    //- h3 #{variable1}
-    //- p #{variable2}
-    //- ul 
-    //-     each item, i in advantages 
-    //-         li= item.advantage
+    

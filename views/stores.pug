@@ -1,13 +1,15 @@
 extends layout2
 
+
 block content
+
     link(rel='stylesheet', href='../css/stores.css')
     .grid-container2
         .headerLeft
             h2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friends&apos;s stores&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         .left
             .item1
-                a(href='storeBrenda')
+                a(onclick='onButtonProfileStore("brenda@gmail.com")')
                     img#newItem(src='../image/a.jpeg', alt='item1')
             .item2
                 img#newItem(src='../image/d.jpeg', alt='item2')
@@ -82,3 +84,24 @@ block content
                 | Adi&apos;s store
                 br
                 | Style: Fancy
+                
+            script.
+                  function onButtonProfileStore(name){
+                    
+                     $.ajax({
+                      "url": "http://localhost:8000/storeOther",
+                      "data": { id: name, },
+                      "method": "GET",
+                      dataType: 'html', // it's no JSON response!
+                        success: function(response) {
+                             document.body.innerHTML = '';
+                             document.write(response); // overwrite current document
+                             window.history.pushState(name, name, "storeOther");
+                             console.log(window.location)
+                        },
+                        error: function(err) {
+                             alert(err+" did happen, please retry");
+                        }
+                    }); 
+                  }  
+

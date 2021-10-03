@@ -1,9 +1,10 @@
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
 html
     head
         link(rel='stylesheet' href='../css/constant.css')
         script(src='../newJS.js')
         meta(charset='utf-8')
-        title
+        
     body
         .header
             .grid-container1
@@ -25,7 +26,7 @@ html
                 div
                     a(href='contactUs') Contact-us
                 div
-                    a(href='myProfile') My-Profile
+                    a(onclick='onButtonProfile()') My-Profile
             .connect
                 br
                 a(href='connect')
@@ -34,6 +35,8 @@ html
                     img#connectImg(src='../image/fav-removebg-preview.png' alt='Favorites')
                 a(href='shoppingbag')
                     img#connectImg(src='../image/bag-removebg-preview.png' alt='Shopping bag')
+                    a(onclick='signOut()')
+                    img#connectImg(onclick='signOut()' src='../image/signout.png' alt='Shopping bag')
         block content
         br
         .footer
@@ -43,18 +46,26 @@ html
             a.text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shipping Policy
             a.text &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newsletter
             br
+        
         script.
-            if (window.location.href.indexOf("logIn") != -1) {
-            alert("log in successfully!");
-            }
-            else if (window.location.href.indexOf("newUser") != -1) {
-            alert("new user created successfully!");
-            var data = sessionStorage.getItem('Style');
-            swal("Hi!\\nWe saw that you especially like " + data + "-style clothes, so to make it easier to get started on the site and find what you love.\n we want to recommend you a community that will suit you exactly! The “My Clothes” community that contains clothes that are mostly in " + data + "-style, your favorite.\nEnjoy!");
-            }
-            else if (window.location.href.indexOf("newContactRequest") != -1) {
-            alert("new contact request was sent successfully!");
-            }
-            else if (window.location.href.indexOf("connect") != -1) {
-            alert("Email doesn't exists in our systems");
-                
+                  function onButtonProfile(){
+                     var userName = window.localStorage.getItem("loggedUser");
+                     $.ajax({
+                      "url": "http://localhost:8000/myProfile",
+                      "data": { id: userName, },
+                      "method": "GET",
+                      dataType: 'html', // it's no JSON response!
+                        success: function(response) {
+                             document.body.innerHTML = '';
+                             document.write(response); // overwrite current document
+                             window.history.pushState("MyProfile", "My Profile", "MyProfile");
+                             console.log(window.location)
+                        },
+                        error: function(err) {
+                             alert(err+" did happen, please retry");
+                        }
+                    }); 
+                  }  
+                 function signOut(){
+                     localStorage.removeItem("loggedUser")
+                  }  

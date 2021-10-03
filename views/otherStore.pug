@@ -18,14 +18,5 @@ block content
                             div= item.name
                             div Style: #{item.style}
                             div Price: #{item.price} NIS
-                            
-                          
-                        
-                          
-        
-
-            
-            .addItem 
-                a(href='addItemPage')
-                    img#addItem(src='../image/addItem-removebg-preview.png')
-                
+                            .addtocart( onclick="addedToCart(item)") Add to cart
+                            .addtocart( onclick='addedTofav(item)') Add to fav

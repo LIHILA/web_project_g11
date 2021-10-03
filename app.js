@@ -1,4 +1,3 @@
-//import modules
 const express = require('express');
 const app = express();
 const port = 8000;
@@ -6,6 +5,8 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const CRUD_operations = require("./CRUD_functions.js");
 const newJS = require("./newJS.js");
+
+
 
 app.use(express.static((path.join(__dirname, '/'))));
 app.use(bodyParser.json());
@@ -15,21 +16,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-// home route
+// homePage route
 app.get('/', function(req,res){
-    let advantages = [
-        {advantage: 'Dynamic'},
-        {advantage: 'Easy'},
-        {advantage: 'Fast'},
-        {advantage: 'Smart'}
-    ];
-
-    res.render('homepage', {
-        variable1: 'What is Pug?',
-        variable2: 'Pug is a template engine for Node and for the browser',
-        advantages: advantages
-    });
+    res.render('homepage');
 });
+
+app.get('/homepage', (req, res) => {
+    res.render('homepage');
+});
+
 
 app.use(express.static('public'));
 
@@ -57,16 +52,24 @@ app.get('/contactUs',(req, res)=>{
 
 
 //cbrendaStore page
-app.get('/storeBrenda', (req, res) => {
-    res.render('storeBrenda');
+app.get('/storeOther', (req, res) => {
+	if(!req.query.id )
+    {
+       return res.render('homepage');
+    }
+	var x = CRUD_operations.getOtherStore(req,res);
 });
 
 
-//myProfile page
 app.get('/myProfile', (req, res) => {
-    res.render('myProfile');
+	if(!req.query.id )
+    {
+       return res.render('homepage');
+    }
+	var x = CRUD_operations.getMyProfile(req,res);
+	
+    
 });
-
 //addItemPage page
 app.get('/addItemPage', (req, res) => {
     res.render('addItemPage');
@@ -121,4 +124,6 @@ app.post("/connect", CRUD_operations.connect);
 app.post("/removeItemFromCart", CRUD_operations.removeItemFromCart);
 app.post("/removeItemFromFav", CRUD_operations.removeItemFromFav);
 app.post("/addTofav", CRUD_operations.addedTofav);
-
+app.post("/addToCart", CRUD_operations.addedToCart);
+app.post("/getMyProfile", CRUD_operations.getMyProfile);
+app.post("/getOtherStore", CRUD_operations.getOtherStore);

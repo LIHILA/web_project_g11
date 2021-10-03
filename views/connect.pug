@@ -69,6 +69,27 @@ block content
                 br
                 
                
-                input.sendB(type='submit', name='action', value='login')
+                input.sendB(type='submit', onclick='this.form.submit(); setLocalStorage();', name='action', value='login')
                 |                        &nbsp;  
                 input.sendB(type='submit', name='action', value='forgotPass')
+                
+    script.
+        function setLocalStorage(){
+            console.log('dsadsa')
+            localStorage.setItem("loggedUser", document.getElementById('Emailin').value);
+       }
+    script.
+        if (window.location.href.indexOf("newUser") != -1)
+            alert("error in creating user. Please try again (try using a different email)");
+        else if (window.location.href.indexOf("connect?forgot") != -1)
+            alert("new password is  " + window.location.search.substring(8));
+        else if (window.location.href.indexOf("connect?login") != -1)
+            alert ("user name or password are incorrect")
+        
+    
+    script.
+        function saveDataSession() {
+            var e = document.getElementById("FavoritStyle");
+            var strUser = e.options[e.selectedIndex].text;
+            sessionStorage.setItem('Style', strUser)
+        }

@@ -32,11 +32,22 @@ block content
             input#brand(type='text', name='brand', style='width: 30%;')
             br
             br
-            label(for='photo') Choose file to upload
-            input#photo(type='file', name='photo', accept='.jpg, .jpeg, .png')
+            label(for='photo') Photo Url
+            input#brand(type='text', name='photo', style='width: 30%;')
+            br
+            br
+            input#store(type='text', value=''  name='storeid', style='width: 30%;')
             .submit
             br
             br
-            input.submitbutton(type='submit', value='Submit', onclick='http://localhost:8000/homepage')
+            input.submitbutton(type='submit', value='Submit', onclick='alertOk()')
         br
         br
+    script.
+        document.getElementById('store').setAttribute('value', localStorage.getItem('loggedUser'));
+        document.getElementById("store").style.display = "none";
+        
+        function alertOk()
+        {
+            alert('Ok');
+        }
