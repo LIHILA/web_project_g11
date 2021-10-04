@@ -52,7 +52,7 @@ app.get('/contactUs',(req, res)=>{
 
 
 //cbrendaStore page
-app.get('/storeOther', (req, res) => {
+app.get('/otherStore', (req, res) => {
 	if(!req.query.id )
     {
        return res.render('homepage');

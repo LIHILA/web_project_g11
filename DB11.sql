@@ -18,7 +18,7 @@ create table web_project_g11.user
     photo longblob 
     
 );
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("brenda@gmail.com", "brenda", "bibi", "bbbbbb", "boho", "hi, my name is brenda- welcome to my boho store")
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("brenda@gmail.com", "brenda", "bibi", "bbbbbb", "boho", "hi, my name is brenda- welcome to my boho store");
 
 
 create table web_project_g11.item
@@ -29,9 +29,12 @@ create table web_project_g11.item
     price int not null,
     size varchar(500) not null,
     brand varchar(500) not null,
-    photo varchar(500) not null,
+    photo longblob not null,
     store_id varchar (500)
 );
+
+insert into web_project_g11.item (name, style, price, size, brand, photo, store_id) values ('bag', 'boho', 40, 'M', 'zara', '0x612E6A706567', 'brenda@gmail.com');
+insert into web_project_g11.item (name, style, price, size, brand, photo, store_id) values ('bbb', 'boho', 40, 'M', 'zara', '0x612E6A706567', 'brenda@gmail.com');
 
 create table web_project_g11.userFavorites
 (

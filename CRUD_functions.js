@@ -25,9 +25,9 @@ const createNewItem = function (req, res) {
   sql.query("INSERT INTO web_project_g11.item SET ?", NEWI, (err, mysqlres) => {
     if (err) {
       console.log("error: ", err);
-      res.render(path.join(__dirname, "/views/addItemPage.pug"));
+      res.render(path.join(__dirname, "/views/homepage.pug"));
     }
-    res.render(path.join(__dirname, "/views/myProfile.pug"));
+      res.render(path.join(__dirname, "/views/homepage.pug"));
     return;
   });
 };
@@ -435,9 +435,6 @@ function getMyProfile(req, res) {
           mysqlres.forEach(row => {
 
             try {
-
-
-
               advantages.push({
                 name: row.name,
                 style: row.style,
@@ -456,7 +453,7 @@ function getMyProfile(req, res) {
 
           )
           res.render("myProfile", {
-            advantages: advantages,
+            advantages: advantages
           });
         }
       }

@@ -3,11 +3,11 @@ const dbConfig = require("./db.config.js");
 
 //����� ����� ����
 const connection = mysql.createConnection({
-	host: '127.0.0.1',
-    user: 'root',
-    password: 'yT3mrpev@',
-    port: 3306,
-    database: 'web_project_g11',
+    host: dbConfig.host,
+    user: dbConfig.user,
+    password: dbConfig.password,
+    port: dbConfig.port,
+    database: dbConfig.database,
     multipleStatements: true,
     insecureAuth: true,
 });
@@ -18,3 +18,4 @@ connection.connect(error => {
 });
 
 module.exports = connection;
+
