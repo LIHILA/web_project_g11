@@ -1,11 +1,10 @@
 CREATE DATABASE web_project_g11;
 
 drop table web_project_g11.user;
--- drop table web_project_g11.store;
--- drop table web_project_g11.item;
--- drop table web_project_g11.userFavorites;
--- drop table web_project_g11.shoppingbag;
--- drop table web_project_g11.contactUs;
+drop table web_project_g11.item;
+drop table web_project_g11.userFavorites;
+drop table web_project_g11.shoppingbag;
+drop table web_project_g11.contactUs;
 
 create table web_project_g11.user
 (
@@ -67,13 +66,13 @@ create table web_project_g11.contactUs
 
 
 insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("brenda_gmail.com", "brenda", "bibi", "bbbbbbbb", "boho", "hi, my name is brenda- welcome to my boho store","0x612E6A706567");
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("shay@gmail.com", "shay", "piram", "ssssssss", "Occasion", "hi, my name is shay- welcome to my boho store","0x612E6A706567");
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("lihi@gmail.com", "lihi", "lavan", "llllllll", "boho", "hi, my name is lihi- welcome to my boho store","0x612E6A706567");
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("tom@gmail.com", "tom", "yanai", "tttttttt", "Casual", "hi, my name is tom- welcome to my boho store","0x612E6A706567");
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("maya@gmail.com", "maya", "mimi", "mmmmmmmm", "Denim", "hi, my name is maya- welcome to my boho store","0x612E6A706567");
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("Nitzan@gmail.com", "Nitzan", "nini", "nnnnnnnn", "Black", "hi, my name is nitzan- welcome to my boho store","0x612E6A706567");
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("noa@gmail.com", "noa", "nono", "nnnnnnnn", "Glitter", "hi, my name is noa- welcome to my boho store","0x612E6A706567");
-insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("gal@gmail.com", "gal", "glgl", "gggggggg", "Glitter", "hi, my name is gal- welcome to my boho store","0x612E6A706567");
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("shay_gmail.com", "shay", "piram", "ssssssss", "Occasion", "hi, my name is shay- welcome to my boho store","0x612E6A706567");
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("lihi_gmail.com", "lihi", "lavan", "llllllll", "boho", "hi, my name is lihi- welcome to my boho store","0x612E6A706567");
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("tom_gmail.com", "tom", "yanai", "tttttttt", "Casual", "hi, my name is tom- welcome to my boho store","0x612E6A706567");
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("maya_gmail.com", "maya", "mimi", "mmmmmmmm", "Denim", "hi, my name is maya- welcome to my boho store","0x612E6A706567");
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("Nitzan_gmail.com", "Nitzan", "nini", "nnnnnnnn", "Black", "hi, my name is nitzan- welcome to my boho store","0x612E6A706567");
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("noa_gmail.com", "noa", "nono", "nnnnnnnn", "Glitter", "hi, my name is noa- welcome to my boho store","0x612E6A706567");
+insert into web_project_g11.user (email, firstName,lastName,pass, FavoritStyle, about,photo) values ("gal_gmail.com", "gal", "glgl", "gggggggg", "Glitter", "hi, my name is gal- welcome to my boho store","0x612E6A706567");
 
 
 insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "brenda@gmail.com");
@@ -87,9 +86,13 @@ insert into web_project_g11.item (name, style, price, size, brand , photo, store
 insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "dress", "boho", "40", "s", "adika","0x612E6A706567", "lihi@gmail.com");
 insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "shoes", "boho", "100", "s", "adika","0x612E6A706567", "shay@gmail.com");
 insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "heels", "boho", "150", "s", "adika","0x612E6A706567", "tom@gmail.com");
-insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "shay@gmail.com");
+insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skini", "boho", "160", "s", "adika","0x612E6A706567", "shay@gmail.com");
+insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "90", "s", "adika","0x612E6A706567", "brenda@gmail.com");
 insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "brenda@gmail.com");
-insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "brenda@gmail.com");
+insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "Nitzan@gmail.com");
+insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "noa@gmail.com");
+insert into web_project_g11.item (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "noa@gmail.com");
+
 
 insert into web_project_g11.userFavorites (name, style, price, size, brand , photo, store_id) values ( "skirt", "boho", "60", "s", "adika","0x612E6A706567", "brenda@gmail.com");
 insert into web_project_g11.userFavorites (name, style, price, size, brand , photo, store_id) values ( "dress", "boho", "40", "s", "adika","0x612E6A706567", "lihi@gmail.com");
@@ -108,6 +111,7 @@ insert into web_project_g11.contactUs (fullName, phone, Email, comment) values (
 
 
 select * from web_project_g11.user;
+select * from web_project_g11.item;
 select * from web_project_g11.shoppingbag;
 
 
