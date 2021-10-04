@@ -32,8 +32,10 @@ block content
             input#brand(type='text', name='brand', style='width: 30%;')
             br
             br
-            label(for='photo') Photo Url
-            input#brand(type='text', name='photo', style='width: 30%;')
+            label(for='photo') Choose a photo of you to upload:
+                   
+            input#photo(type='file', name='photo', accept='.jpg, .jpeg, .png')
+                
             br
             br
             input#store(type='text', value=''  name='storeid', style='width: 30%;')
@@ -49,5 +51,5 @@ block content
         
         function alertOk()
         {
-            alert('Ok');
+            alert('Item added successfully!');
         }
