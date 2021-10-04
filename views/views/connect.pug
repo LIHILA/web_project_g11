@@ -1,0 +1,95 @@
+extends layout2
+block content
+    script(src="../newJS.js")
+    script(src="../CRUD_functions.js")
+    link(rel='stylesheet', href='../css/connectPage.css')
+    .grid-container2
+        .text1
+            h1(style='font-size:50px; text-align: center;') Connect
+            div(style='text-align: center;')
+                button.sendB(onclick='signUpClick(),able_fn(),able_ln(),able_e_u(),able_p_u(), disdable_e_i(), disable_p_i()')
+                    | Sign
+                    | Up
+                |                        &nbsp;                                      
+                button.sendB(value= 'Sign In' onclick='signInClick(),able_e_i(),able_p_i(), disable_fn(), disable_ln(), disable_e_u(),disable_p_u()')
+                    | Sign
+                    | In
+            form#signup(action='http://localhost:8000/newUser', method='POST', style='display: none;')
+                label(for='FirstName')
+                    b First Name:
+                input#FirstName(type='text', name='FirstName', placeholder='Enter your first name ..', style='width: 30%; height: 50px;', required='')
+                br
+                label(for='LastName')
+                b Last Name:
+                input#LastName(type='text', name='LastName', placeholder='Enter your last name ..', style='width: 30%; height: 50px;', required='')
+                br
+                label(for='FavoritStyle')
+                b style:
+                select#FavoritStyle(name='FavoritStyle', placeholder='Enter your favorite style ..', style='width: 30%; height: 50px;', required='')
+                    | &gt;
+                    option(value='') --Please choose an option--
+                    option(value='Denim') Denim 
+                    option(value='Boho') Boho 
+                    option(value='Casual') Casual 
+                    option(value='Occasion') Occasion 
+                    option(value='Black') Black 
+                    option(value='Glitter') Glitter 
+                    option(value='Goth') Goth 
+                br
+                label(for='Emailup')
+                b Email:
+                input#Emailup(type='text', name='Emailup', placeholder='Enter your Email Address ..', style='width: 30%; height: 50px;', required='')
+                br
+                label(for='pwdup')
+                b Password:
+                input#pwdup(type='password', name='pwdup', maxlength='8', placeholder='Choose a password (max 8 digits)', style='width: 30%; height: 50px;', required='')
+                br
+                label(for='about')
+                b Tell us about your store:
+                | &#x9;
+                input#about(116='', type='text', name='about', placeholder='Enter your about ..', style='width: 30%; height: 50px;', required='')
+                | &#x9;
+                br
+                | &#x9;
+                br
+                label(for='photo') Choose a photo of you to upload:
+                |        
+                input#photo(type='file', name='photo', accept='.jpg, .jpeg, .png')
+                br
+                input.sendB(type='submit', value='Go!', onclick='this.form.submit(); saveDataSession();')
+
+            form#signin(action='http://localhost:8000/connect', method='POST', style='display: none;')
+                label(for='Emailin')
+                b Email:
+                input#Emailin(type='text', name='Emailin', placeholder='Enter Email address you sign up with ..', style='width: 30%; height: 50px;', required='')
+                br
+                label(for='pwdin')
+                b Password:
+                input#pwdin(type='password', name='pwdin', maxlength='8', placeholder='Enter your password', style='width: 30%; height: 50px;')
+                br
+                
+               
+                input.sendB(type='submit', onclick='this.form.submit(); setLocalStorage();', name='action', value='login')
+                |                        &nbsp;  
+                input.sendB(type='submit', name='action', value='forgotPass')
+                
+    script.
+        function setLocalStorage(){
+            console.log('dsadsa')
+            localStorage.setItem("loggedUser", document.getElementById('Emailin').value);
+       }
+    script.
+        if (window.location.href.indexOf("newUser") != -1)
+            alert("error in creating user. Please try again (try using a different email)");
+        else if (window.location.href.indexOf("connect?forgot") != -1)
+            alert("new password is  " + window.location.search.substring(8));
+        else if (window.location.href.indexOf("connect?login") != -1)
+            alert ("user name or password are incorrect")
+        
+    
+    script.
+        function saveDataSession() {
+            var e = document.getElementById("FavoritStyle");
+            var strUser = e.options[e.selectedIndex].text;
+            sessionStorage.setItem('Style', strUser)
+        }

@@ -1,0 +1,31 @@
+extends layout2
+block content
+    script(src="/newJS.js")
+    script(src="/CRUD_functions.js")
+    link(rel='stylesheet', href='../css/myprofile.css')
+    .grid-container2
+        
+            
+            div.flex
+                
+                
+                 
+                 
+                    each item in advantages 
+                          .item22
+                            img#addItem(src='/image/'+item.photo)
+                            br
+                            div= item.name
+                            div Style: #{item.style}
+                            div Price: #{item.price} NIS
+                            
+                          
+                        
+                          
+        
+
+            
+            .addItem 
+                a(href='addItemPage')
+                    img#addItem(src='../image/addItem-removebg-preview.png')
+                

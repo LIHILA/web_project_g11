@@ -1,0 +1,33 @@
+
+extends layout2
+
+block content
+    script(src="/newJS.js")
+    script(src="/CRUD_functions.js")
+    link(rel='stylesheet', href='../css/contactUs.css')
+    .grid-container2
+        .text1
+            .contact
+                h1 Contact Us
+            form(action='http://localhost:8000/newContactRequest', method='POST')
+                label(for='FullName')
+                input#FullName(type='text', name='FullName', placeholder='Full Name : ', style='width: 30%; height: 50px;')
+                label(for='Phone')
+                input#Phone(type='text', name='Phone', placeholder='Phone Number : ', style='width: 30%; height: 50px;')
+                label(for='Email')
+                input#Email(type='text', name='Email', placeholder='Email Address* : ', style='width: 30%; height: 50px;')
+                br
+                br
+                label(for='Comment')
+                textarea#Comment(name='Comment', cols='50', rows='4', placeholder='Description : ', style='width: 92%; height: 150px;')
+                br
+                br
+                button.sendB(type='submit', value='Close') Send
+                script.
+                    function MessageSent() {
+                    alert("Message Sent!");
+                    }
+
+
+
+
